@@ -116,17 +116,20 @@
                 <h2 id="1-let命令"><a href="#1-let命令" class="headerlink" title="1. let命令"></a>1. let命令</h2><ol>
 <li>let和var的区别：let声明的变量只有所在的代码块有效。</li>
 <li>没有变量的提升，一定要声明后使用。使用let命令声明变量之前，该变量都是不可用的。形成“暂时性死区”。</li>
-<li>typeof不再是一个百分之百安全的操作。<h2 id="2-块级作用域"><a href="#2-块级作用域" class="headerlink" title="2. 块级作用域"></a>2. 块级作用域</h2></li>
-<li>es5和es6比较：es5只有全局作用域和函数作用于，没有块级作用域。</li>
+<li><p>typeof不再是一个百分之百安全的操作。</p>
+<h2 id="2-块级作用域"><a href="#2-块级作用域" class="headerlink" title="2. 块级作用域"></a>2. 块级作用域</h2></li>
+<li><p>es5和es6比较：es5只有全局作用域和函数作用于，没有块级作用域。</p>
+</li>
 <li>let实际上为javascript新增了块级作用域。</li>
 <li>es6允许块级作用域的任意嵌套。</li>
-<li>es5规定函数只能在顶层作用域和函数作用域中声明，不能再块级作用域声明，严格模式下会报错。为了避免es5和es6环境报错，应不要在<strong>块级作用域里声明函数</strong>。<h2 id="3-const命令"><a href="#3-const命令" class="headerlink" title="3. const命令"></a>3. const命令</h2></li>
-<li>const声明一个只读的常量。一旦声明，常量的值就不能改变。const一旦声明变量，就必须立即初始化，不能留到以后赋值。</li>
+<li><p>es5规定函数只能在顶层作用域和函数作用域中声明，不能再块级作用域声明，严格模式下会报错。为了避免es5和es6环境报错，应不要在<strong>块级作用域里声明函数</strong>。</p>
+<h2 id="3-const命令"><a href="#3-const命令" class="headerlink" title="3. const命令"></a>3. const命令</h2></li>
+<li><p>const声明一个只读的常量。一旦声明，常量的值就不能改变。const一旦声明变量，就必须立即初始化，不能留到以后赋值。</p>
+</li>
 <li>其他特性和let类似</li>
 <li>对于复合类型的变量，变量名不指向数据，而是指向数据所在的地址。const命令只是保证变量名指向的地址不变，并不保证该地址的数据不变，所以将一个对象声明为常量必须非常小心。</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const foo = &#123;&#125;;</span><br><span class="line">foo.prop = 123;</span><br><span class="line"></span><br><span class="line">foo,prop</span><br><span class="line">//123</span><br><span class="line"></span><br><span class="line">foo = &#123;&#125;;</span><br><span class="line">//常量foo储存的是一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把foo指向另一个地址，但对象本身是可变的，所以依然可以为其添加新属性</span><br></pre></td></tr></table></figure>
-</li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const foo = &#123;&#125;;</span><br><span class="line">foo.prop = 123;</span><br><span class="line"></span><br><span class="line">foo,prop</span><br><span class="line">//123</span><br><span class="line"></span><br><span class="line">foo = &#123;&#125;;</span><br><span class="line">//常量foo储存的是一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把foo指向另一个地址，但对象本身是可变的，所以依然可以为其添加新属性</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>ES5只有两种声明变量的方法：var命令和function命令。ES6除了添加let和const命令，后面还会提到，另外两种声明变量的方法：import命令和class命令。所以，ES6一共有6种声明变量的方法。</p>
 </blockquote>

@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="">
-  <title>不急不躁</title>
+  <title>JS常见对象 | 不急不躁</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="不急不躁">
-<meta property="og:url" content="/index.html">
+  <meta name="description" content="#JS常见对象 1.数组1.1创建数组使用数组直接量是创建数组最简单的办法，在方括号中将数组元素用逗号隔开即可。例如： 1234var empty = [];        		//没有元素的数组var num1  = [2,3,5,6]  		//有四个值得数组var num2  = [1.1,true,&amp;quot;a&amp;quot;,] //3个不同类型的元素和结尾的逗号   逗号是可选的var">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS常见对象">
+<meta property="og:url" content="/2017/12/11/JS常见对象/index.html">
 <meta property="og:site_name" content="不急不躁">
+<meta property="og:description" content="#JS常见对象 1.数组1.1创建数组使用数组直接量是创建数组最简单的办法，在方括号中将数组元素用逗号隔开即可。例如： 1234var empty = [];        		//没有元素的数组var num1  = [2,3,5,6]  		//有四个值得数组var num2  = [1.1,true,&amp;quot;a&amp;quot;,] //3个不同类型的元素和结尾的逗号   逗号是可选的var">
+<meta property="og:updated_time" content="2017-12-13T09:23:37.112Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不急不躁">
+<meta name="twitter:title" content="JS常见对象">
+<meta name="twitter:description" content="#JS常见对象 1.数组1.1创建数组使用数组直接量是创建数组最简单的办法，在方括号中将数组元素用逗号隔开即可。例如： 1234var empty = [];        		//没有元素的数组var num1  = [2,3,5,6]  		//有四个值得数组var num2  = [1.1,true,&amp;quot;a&amp;quot;,] //3个不同类型的元素和结尾的逗号   逗号是可选的var">
   
     <link rel="alternative" href="/atom.xml" title="不急不躁" type="application/atom+xml">
   
@@ -135,16 +140,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-JS常见对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-JS常见对象" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/11/JS常见对象/">JS常见对象</a>
+    <h1 class="article-title" itemprop="name">
+      JS常见对象
     </h1>
   
 
@@ -160,11 +163,52 @@
         <p>#JS常见对象</p>
 <h2 id="1-数组"><a href="#1-数组" class="headerlink" title="1.数组"></a>1.数组</h2><h3 id="1-1创建数组"><a href="#1-1创建数组" class="headerlink" title="1.1创建数组"></a>1.1创建数组</h3><p>使用数组直接量是创建数组最简单的办法，在方括号中将数组元素用逗号隔开即可。例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var empty = [];        		//没有元素的数组</span><br><span class="line">var num1  = [2,3,5,6]  		//有四个值得数组</span><br><span class="line">var num2  = [1.1,true,&quot;a&quot;,] //3个不同类型的元素和结尾的逗号   逗号是可选的</span><br><span class="line">var num3  = [ , , ]         //数组有两个元素，都是undefined</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/12/11/JS常见对象/#more">more >></a>
-        
+<a id="more"></a>
+<p>数组直接量中的至不一定要是常量，他们可以是任意的表达式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr  = 1024;</span><br><span class="line">var arr1 = [arr,arr+1,arr+2,arr+3];</span><br></pre></td></tr></table></figure>
+<h3 id="1-2数组的长度"><a href="#1-2数组的长度" class="headerlink" title="1.2数组的长度"></a>1.2数组的长度</h3><p>每一个数组都有一个length属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[].length          //=&gt;0:数组没有元素</span><br><span class="line">[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;].length   //=&gt;3:最大索引为2，length长度为3</span><br><span class="line"></span><br><span class="line">//索引，可以理解为下标，是从0开始的。例如：</span><br><span class="line">//num1[1] 表示num1这个数组中的索引值为1的元素，即第二个元素</span><br></pre></td></tr></table></figure>
+<h2 id="2-函数"><a href="#2-函数" class="headerlink" title="2.函数"></a>2.函数</h2><h3 id="2-1-为什么要用函数"><a href="#2-1-为什么要用函数" class="headerlink" title="2.1 为什么要用函数"></a>2.1 为什么要用函数</h3><p>函数只需要定义一次，但它可能被执行或调用任意次数。</p>
+<h3 id="2-2-函数定义"><a href="#2-2-函数定义" class="headerlink" title="2.2 函数定义"></a>2.2 函数定义</h3><p>函数使用function关键字来定义，它可以用在函数定义表达式，或者函数声明语句里。在这两种形式中，函数定义都从function关键词开始，其后跟随这些组成部分：</p>
+<blockquote>
+<p>• 函数名称标识符。函数名称是函数声明语句必须的部分，它的用途就像变量的名字，新定义的函数对象会赋值给这个变量<br>• 一对圆括号，其中包含0或多个用逗号隔开的标识符组成的列表<br>• 一对花括号，其中包含0或多条JS语句，一旦调用函数，就会执行这些语句</p>
+</blockquote>
+<p>其实表现出来就是这样</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function 函数名 （参数）&#123;</span><br><span class="line">	js语句</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-正则表达式"><a href="#3-正则表达式" class="headerlink" title="3.正则表达式"></a>3.正则表达式</h2><h3 id="2-1什么是正则表达式"><a href="#2-1什么是正则表达式" class="headerlink" title="2.1什么是正则表达式"></a>2.1什么是正则表达式</h3><p>是描述字符模式的对象。</p>
+<h3 id="2-2创建-RegExp-对象的语法："><a href="#2-2创建-RegExp-对象的语法：" class="headerlink" title="2.2创建 RegExp 对象的语法："></a>2.2创建 RegExp 对象的语法：</h3><blockquote>
+<p>new RegExp(pattern, attributes);</p>
+</blockquote>
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p>参数 pattern 是一个字符串，指定了正则表达式的模式或其他正则表达式。<br>参数 attributes 是一个可选的字符串，包含属性 “g”、”i” 和 “m”，分别用于指定全局匹配、区分大小写的匹配和多行匹配。ECMAScript 标准化之前，不支持 m 属性。如果 pattern 是正则表达式，而不是字符串，则必须省略该参数。</p>
+<h3 id="2-3用法"><a href="#2-3用法" class="headerlink" title="2.3用法"></a>2.3用法</h3><p>方括号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">表达式 			描述 </span><br><span class="line">[abc] 			查找方括号之间的任何字符。</span><br><span class="line">[^abc] 			查找任何不在方括号之间的字符。</span><br><span class="line">[0-9] 			查找任何从 0 至 9 的数字。</span><br><span class="line">[a-z] 			查找任何从小写 a 到小写 z 的字符。</span><br><span class="line">[A-Z] 			查找任何从大写 A 到大写 Z 的字符。</span><br><span class="line">[A-z] 			查找任何从大写 A 到小写 z 的字符。</span><br><span class="line">[adgk] 			查找给定集合内的任何字符。</span><br><span class="line">[^adgk] 		查找给定集合外的任何字符。</span><br><span class="line">(red|blue|green) 	查找任何指定的选项。</span><br></pre></td></tr></table></figure>
+<p>元字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">元字符 			描述 </span><br><span class="line">. 			查找单个字符，除了换行和行结束符。 </span><br><span class="line">\w 			查找单词字符。 </span><br><span class="line">\W 			查找非单词字符。 </span><br><span class="line">\d 			查找数字。 </span><br><span class="line">\D 			查找非数字字符。 </span><br><span class="line">\s 			查找空白字符。 </span><br><span class="line">\S 			查找非空白字符。 </span><br><span class="line">\b 			匹配单词边界。 </span><br><span class="line">\B 			匹配非单词边界。 </span><br><span class="line">\0 			查找 NUL 字符。 </span><br><span class="line">\n 			查找换行符。 </span><br><span class="line">\f			查找换页符。 </span><br><span class="line">\r 			查找回车符。 </span><br><span class="line">\t 			查找制表符。 </span><br><span class="line">\v 			查找垂直制表符。 </span><br><span class="line">\xxx 		查找以八进制数 xxx 规定的字符。 </span><br><span class="line">\xdd 		查找以十六进制数 dd 规定的字符。 </span><br><span class="line">\uxxxx 		查找以十六进制数 xxxx 规定的 Unicode 字符。</span><br></pre></td></tr></table></figure>
+<p>量词</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">量词 			描述 </span><br><span class="line">n+ 			匹配任何包含至少一个 n 的字符串。 </span><br><span class="line">n* 			匹配任何包含零个或多个 n 的字符串。 </span><br><span class="line">n? 			匹配任何包含零个或一个 n 的字符串。 </span><br><span class="line">n&#123;X&#125; 		匹配包含 X 个 n 的序列的字符串。 </span><br><span class="line">n&#123;X,Y&#125; 		匹配包含 X 或 Y 个 n 的序列的字符串。 </span><br><span class="line">n&#123;X,&#125; 		匹配包含至少 X 个 n 的序列的字符串。 </span><br><span class="line">n$ 			匹配任何结尾为 n 的字符串。 </span><br><span class="line">^n 			匹配任何开头为 n 的字符串。 </span><br><span class="line">?=n 		匹配任何其后紧接指定字符串 n 的字符串。 </span><br><span class="line">?!n 		匹配任何其后没有紧接指定字符串 n 的字符串。</span><br></pre></td></tr></table></figure>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -184,16 +228,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/11/JS常见对象/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http:/2017/12/11/JS常见对象/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/07/ES6学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6 学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -213,94 +316,14 @@
 
 
 
-
   
-    <article id="post-ES6学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/ES6学习笔记/">ES6 学习笔记</a>
-    </h1>
   
 
-        
-        <a href="/2017/12/07/ES6学习笔记/" class="archive-article-date">
-  	<time datetime="2017-12-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-let命令"><a href="#1-let命令" class="headerlink" title="1.let命令"></a>1.let命令</h2><ol>
-<li>let和var的区别：let声明的变量只有所在的代码块有效。</li>
-<li>没有变量的提升，一定要声明后使用。使用let命令声明变量之前，该变量都是不可用的。形成“暂时性死区”。</li>
-<li>typeof不再是一个百分之百安全的操作。</li>
-</ol>
-<h2 id="2-块级作用域"><a href="#2-块级作用域" class="headerlink" title="2.块级作用域"></a>2.块级作用域</h2><ol>
-<li>es5和es6比较：es5只有全局作用域和函数作用于，没有块级作用域。</li>
-<li>let实际上为javascript新增了块级作用域。</li>
-<li>es6允许块级作用域的任意嵌套。</li>
-<li>es5规定函数只能在顶层作用域和函数作用域中声明，不能再块级作用域声明，严格模式下会报错。为了避免es5和es6环境报错，应不要在<strong>块级作用域里声明函数</strong>。</li>
-</ol>
-        
-          <a class="article-more-a" href="/2017/12/07/ES6学习笔记/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/07/ES6学习笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -323,8 +346,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

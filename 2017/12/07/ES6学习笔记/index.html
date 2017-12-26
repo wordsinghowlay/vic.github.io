@@ -5,22 +5,22 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ES6 学习笔记 | Hexo</title>
+  <link rel="dns-prefetch" href="">
+  <title>ES6 学习笔记 | 不急不躁</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1.let命令 let和var的区别：let声明的变量只有所在的代码块有效。 没有变量的提升，一定要声明后使用。使用let命令声明变量之前，该变量都是不可用的。形成“暂时性死区”。 typeof不再是一个百分之百安全的操作。  2.块级作用域 es5和es6比较：es5只有全局作用域和函数作用于，没有块级作用域。 let实际上为javascript新增了块级作用域。 es6允许块级作用域的任意嵌套">
 <meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6 学习笔记">
-<meta property="og:url" content="http://yoursite.com/2017/12/07/ES6学习笔记/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="/2017/12/07/ES6学习笔记/index.html">
+<meta property="og:site_name" content="不急不躁">
 <meta property="og:description" content="1.let命令 let和var的区别：let声明的变量只有所在的代码块有效。 没有变量的提升，一定要声明后使用。使用let命令声明变量之前，该变量都是不可用的。形成“暂时性死区”。 typeof不再是一个百分之百安全的操作。  2.块级作用域 es5和es6比较：es5只有全局作用域和函数作用于，没有块级作用域。 let实际上为javascript新增了块级作用域。 es6允许块级作用域的任意嵌套">
-<meta property="og:updated_time" content="2017-12-07T10:17:49.527Z">
+<meta property="og:updated_time" content="2017-12-13T09:20:00.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6 学习笔记">
 <meta name="twitter:description" content="1.let命令 let和var的区别：let声明的变量只有所在的代码块有效。 没有变量的提升，一定要声明后使用。使用let命令声明变量之前，该变量都是不可用的。形成“暂时性死区”。 typeof不再是一个百分之百安全的操作。  2.块级作用域 es5和es6比较：es5只有全局作用域和函数作用于，没有块级作用域。 let实际上为javascript新增了块级作用域。 es6允许块级作用域的任意嵌套">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="不急不躁" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -47,10 +47,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="img/touxiang.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">John Doe</a></h1>
+		  <h1 class="header-author"><a href="">Vic</a></h1>
 		</hgroup>
 		
 
@@ -81,11 +81,7 @@
 				
 					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
 		</nav>
@@ -103,10 +99,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="img/touxiang.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">Vic</h1>
 			</hgroup>
 			
 			
@@ -120,11 +116,7 @@
 					
 						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
 						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 				</div>
 			</nav>
@@ -179,6 +171,7 @@
 <li>es6允许块级作用域的任意嵌套。</li>
 <li>es5规定函数只能在顶层作用域和函数作用域中声明，不能再块级作用域声明，严格模式下会报错。为了避免es5和es6环境报错，应不要在<strong>块级作用域里声明函数</strong>。</li>
 </ol>
+<a id="more"></a>
 <h2 id="3-const命令"><a href="#3-const命令" class="headerlink" title="3. const命令"></a>3. const命令</h2><ol>
 <li>const声明一个只读的常量。一旦声明，常量的值就不能改变。const一旦声明变量，就必须立即初始化，不能留到以后赋值。</li>
 <li>其他特性和let类似</li>
@@ -191,8 +184,10 @@
 <h2 id="4-顶层对象的属性"><a href="#4-顶层对象的属性" class="headerlink" title="4. 顶层对象的属性"></a>4. 顶层对象的属性</h2><p>顶层对象，在浏览器环境指的是window对象，在Node指的是global对象。ES6规定，为了保持兼容性，var命令和function命令声明的全局变量，依旧是顶层对象的属性；另一方面规定，let命令、const命令、class命令声明的全局变量，不属于顶层对象的属性。也就是说，从ES6开始，全局变量将逐步与顶层对象的属性脱钩。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = 1;</span><br><span class="line">// 如果在Node的REPL环境，可以写成global.a</span><br><span class="line">// 或者采用通用方法，写成this.a</span><br><span class="line">window.a // 1</span><br><span class="line"></span><br><span class="line">let b = 1;</span><br><span class="line">window.b // undefined</span><br></pre></td></tr></table></figure>
 <h2 id="5-解构赋值"><a href="#5-解构赋值" class="headerlink" title="5. 解构赋值"></a>5. 解构赋值</h2><h5 id="1-数组的解构赋值"><a href="#1-数组的解构赋值" class="headerlink" title="1. 数组的解构赋值"></a>1. 数组的解构赋值</h5><ol>
-<li>“模式匹配”为变量赋值； var [a, b, c] = [1, 2, 3];</li>
-<li>不完全解构，即等号左边的模式，只匹配一部分的等号右边的数组。</li>
+<li><p>“模式匹配”为变量赋值； var [a, b, c] = [1, 2, 3];</p>
+</li>
+<li><p>不完全解构，即等号左边的模式，只匹配一部分的等号右边的数组。</p>
+</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let [a, b, d] = [1, [2, 3], 4];</span><br><span class="line">a // 1</span><br><span class="line">b // 2</span><br><span class="line">d // 4</span><br></pre></td></tr></table></figure>
 <ol>
@@ -342,7 +337,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/07/ES6学习笔记/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:/2017/12/07/ES6学习笔记/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -354,6 +349,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2017/12/11/JS常见对象/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JS常见对象
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -391,7 +400,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 John Doe
+    		&copy; 2017 Vic
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -475,6 +484,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
             
             <div class="clearfix"></div>
